@@ -2,30 +2,22 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>com.asa.app</groupId>
+    <artifactId>asa-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
   <groupId>com.asa.app</groupId>
-  <artifactId>asa-app</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <artifactId>asa-model</artifactId>
+  <packaging>jar</packaging>
 
-  <name>asa-app</name>
-  <description>Application Maven Multi Modules</description>
+  <name>asa-model</name>
   <url>http://maven.apache.org</url>
-
-  <organization>
-    <name>@asa-Group</name>
-    <url>https://asa-group.com</url>
-  </organization>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <junit.version>4.12</junit.version>
   </properties>
-
-  <modules>
-    <module>asa-model</module>
-  </modules>
 
   <dependencies>
     <dependency>
