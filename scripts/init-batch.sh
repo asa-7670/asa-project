@@ -1,0 +1,1 @@
+mvn -B archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1 -DgroupId=com.asa.app -DartifactId=asa-batch -Dpackage=com.asa.app.batch

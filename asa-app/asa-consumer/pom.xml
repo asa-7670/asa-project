@@ -1,17 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>com.asa.app</groupId>
     <artifactId>asa-app</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>asa-model</artifactId>
+  <artifactId>asa-consumer</artifactId>
   <packaging>jar</packaging>
 
-  <name>${project.name} - model</name>
+  <name>${project.name} - consumer</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -19,6 +18,14 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>asa-model</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>asa-business</artifactId>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

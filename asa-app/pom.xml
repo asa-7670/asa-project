@@ -7,7 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>asa-app</name>
+  <name>${project.name}</name>
   <description>Application Maven Multi Modules</description>
   <url>http://maven.apache.org</url>
 
@@ -17,6 +17,7 @@
   </organization>
 
   <properties>
+    <project.name>asa</project.name>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -25,14 +26,49 @@
 
   <modules>
     <module>asa-model</module>
+    <module>asa-consumer</module>
+    <module>asa-business</module>
+    <module>asa-front</module>
+    <module>asa-batch</module>
   </modules>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <!-- modules -->
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>asa-model</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>asa-consumer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>asa-business</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>asa-front</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>asa-batch</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <!-- Bibliothèques tierces  -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
 </project>

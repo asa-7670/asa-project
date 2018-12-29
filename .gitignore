@@ -1,2 +1,7 @@
 .idea
 asa-app/.idea
+asa-app/asa-model/target
+asa-app/asa-consumer/target
+asa-app/asa-business/target
+asa-app/asa-batch/target
+asa-app/asa-front/target
